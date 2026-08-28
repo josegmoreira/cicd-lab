@@ -27,23 +27,4 @@ jobs:
           pip install -r requirements.txt
 
       - name: Executar testes
-        run: python -m pytest -vname: CI
-
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
-
-jobs:
-  teste:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Baixar código
-        uses: actions/checkout@v4
-
-      - name: Mostrar mensagem
-        run: echo "Pipeline CI executado com sucesso"
+        run: python -m pytest -v
